@@ -31,7 +31,7 @@ export default function Home() {
         searchResult.map((result) => {
           const img = "https://image.tmdb.org/t/p/w500" + result.poster_path
           return (
-            <div>
+            <div key={result.id}>
               <p>id : {result.id} </p>
               <p>Titile : {result.title}</p>
               <p><Image width={400} height={500} src={img}></Image></p>
